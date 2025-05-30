@@ -1,0 +1,46 @@
+<head>
+    <meta charset="utf-8" />
+  <meta name = "viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />   
+            <title>Airflow Globe</title> 
+           <style>
+        html,
+        body {
+           background-color: var(--calcite-ui-foreground-2);
+           padding: 0;
+           margin: 0;
+           width: 100vw;
+           height: 100vh;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://js.arcgis.com/calcite-components/2.13.2/calcite.css" />
+    <script type="module" src="https://js.arcgis.com/calcite-components/2.13.2/calcite.esm.js"></script>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.31/esri/themes/light/main.css" />
+    <script src="https://js.arcgis.com/4.31/"></script>
+    <script
+       type="module"
+       src="https://js.arcgis.com/map-components/4.31/arcgis-map-components.esm.js"
+     ></script>
+     <link href="worldAircraftWebScene.css" rel="stylesheet" />
+  </head>
+  <body>
+     <a href="/index.html" id="backButton">← Back</a>
+
+  <div id="infoCard">
+  <h2>About This Project</h2>
+<p>
+  This project presents a 3D interactive globe using Esri’s WebScene technology to showcase geographic data in a dynamic and immersive way. The scene is centered around Vitória, Brazil, and uses lighting effects to simulate realistic shadows and daylight conditions.
+</p>
+<p>
+  Explore the visualization by zooming, panning, and rotating the globe to analyze spatial relationships and landscape perspectives in a real-world 3D context.
+</p>
+<p><strong>Technologies:</strong> ArcGIS Maps SDK for JavaScript (SceneView & WebScene),  HTML, CSS, Esri Widgets (Zoom), 3D Lighting & Camera Positioning.</p>
+
+
+    </div>
+      <arcgis-scene item-id="128ba9498cca447ab6ec356b84fee879" basemap="arcgis/topographic">
+         <arcgis-zoom position="top-left"></arcgis-zoom>
+      </arcgis-scene>
+      <script type="module" src="worldAircraftWebScene.js"></script>
+
+  </body>
+</html>
