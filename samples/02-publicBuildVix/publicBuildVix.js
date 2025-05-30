@@ -82,9 +82,121 @@ codedValues.forEach(({ code, name }) => {
   typeBuildSelect.appendChild(option);
 });
 
+const uniqueValueRenderer = {
+  type: "unique-value",
+  field: "tipo", // campo que determina a categoria
+  defaultSymbol: {
+    type: "simple-marker",
+    color: "gray",
+    size: 8
+  },
+  uniqueValueInfos: [
+    {
+      value: 1,
+      symbol: {
+        type: "simple-marker",
+        color: "blue",
+        size: 10
+      },
+      label: "Education"
+    },
+    {
+      value: 2,
+      symbol: {
+        type: "simple-marker",
+        color: "green",
+        size: 10
+      },
+      label: "Health"
+    },
+    {
+      value: 3,
+      symbol: {
+        type: "simple-marker",
+        color: "orange",
+        size: 10
+      },
+      label: "Drainage"
+    },
+    {
+      value: 4,
+      symbol: {
+        type: "simple-marker",
+        color: "red",
+        size: 10
+      },
+      label: "Slopes"
+    },
+    {
+      value: 5,
+      symbol: {
+        type: "simple-marker",
+        color: "yellow",
+        size: 10
+      },
+      label: "Mobility"
+    },
+    {
+      value: 6,
+      symbol: {
+        type: "simple-marker",
+        color: "black",
+        size: 10
+      },
+      label: "Leisure"
+    },
+    {
+      value: 7,
+      symbol: {
+        type: "simple-marker",
+        color: "purple",
+        size: 10
+      },
+      label: "Infrastructure"
+    },
+    {
+      value: 8,
+      symbol: {
+        type: "simple-marker",
+        color: "pink",
+        size: 10
+      },
+      label: "Social Assistance"
+    },
+    {
+      value: 9,
+      symbol: {
+        type: "simple-marker",
+        color: "brown",
+        size: 10
+      },
+      label: "Housing"
+    },
+    {
+      value: 10,
+      symbol: {
+        type: "simple-marker",
+        color: "cyan",
+        size: 10
+      },
+      label: "Stairs"
+    },
+    {
+      value: 11,
+      symbol: {
+        type: "simple-marker",
+        color: "gray",
+        size: 10
+      },
+      label: "Other"
+    }
+  ]
+};
+
 buildsLayer = new FeatureLayer({
   url: "https://gis.vitoria.es.gov.br/arcgis/rest/services/Edit/ObraPublicaStoryMaps/MapServer/0",
   outFields: ["*"],
+  renderer: uniqueValueRenderer,
   popupTemplate: {
     title: "{nome}",
     content: `
