@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layers Vitória</title>
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.30/esri/themes/light/main.css"
+    />
+    <script src="https://js.arcgis.com/4.30/"></script>
+    <link href="publicWorkVix.css" rel="stylesheet" />
+  </head>
+  <body>
+
+    <div id="infoCard">
+      <h2>About This Project</h2>
+      <p>
+        Explore interactive GIS layers from Vitória's public datasets. Select a layer to visualize detailed information about public infrastructure, urban projects, and services. Easily add or remove layers and use the legend to understand map symbols.
+      </p>
+      <p>
+        <strong>Technologies:</strong> ArcGIS JavaScript API, HTML, CSS, Esri Feature Layers & Widgets (Legend, MapView), REST API requests with EsriRequest.
+      </p>
+
+    </div>
+
+    <div id="controls">
+      <label for="typeLayerSelect">Select Layer:</label>
+      <select id="typeLayerSelect">
+        <option disabled selected>Select Layer</option>
+      </select>
+
+      <button id="removeLayer">Remove Layer</button>
+    </div>
+
+    <a href="/index.html" id="backButton">← Back</a>
+
+    <div id="viewDiv"></div>
+
+    <script type="module" src="publicWorkVix.js"></script>
+  </body>
+</html>

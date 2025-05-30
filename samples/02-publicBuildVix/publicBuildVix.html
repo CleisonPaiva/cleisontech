@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Mapa de Obras Públicas</title>
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.29/esri/themes/light/main.css"
+    />
+
+    <link rel="stylesheet" href="publicBuildVix.css" />
+  </head>
+
+  <body>
+    <div id="infoCard">
+      <h2>About This Project</h2>
+      <p>
+        Interactive GIS Viewer displaying Vitória city’s public works data with
+        dynamic filtering and detailed pop-ups.
+      </p>
+      <p>
+        <strong>Technologies:</strong> ArcGIS JavaScript API, HTML, CSS,
+        FeatureLayer, MapView.
+      </p>
+
+    </div>
+
+    <div id="controls">
+      <label for="typeBuildSelect">Filter by type of work:</label>
+      <select id="typeBuildSelect">
+        <option disabled selected>Select Type</option>
+      </select>
+    </div>
+
+    <div id="maptype">
+      <label for="basemapType">Map Type:</label>
+      <div id="basemapType"></div>
+    </div>
+
+    <a href="/index.html" id="backButton">← Back</a>
+
+    <div id="viewDiv"></div>
+
+    <script src="publicBuildVix.js" type="module"></script>
+  </body>
+</html>
