@@ -322,7 +322,10 @@
             <p data-lang="pt" style="font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 6px;">Destaque</p>
             <h4 style="font-size: 22px; font-weight: 700; color: white; margin-bottom: 8px;">WellsGIS — Oil & Gas Well Platform</h4>
           </div>
-          <a href="https://github.com/CleisonPaiva/wells-frontend" target="_blank" class="btn-outline" style="font-size: 13px; padding: 8px 16px;">GitHub →</a>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <a href="https://wells-frontend-one.vercel.app/" target="_blank" class="btn-primary" style="font-size: 13px; padding: 8px 16px;">Live Demo →</a>
+            <a href="https://github.com/CleisonPaiva/wells-frontend" target="_blank" class="btn-outline" style="font-size: 13px; padding: 8px 16px;">GitHub →</a>
+          </div>
         </div>
         <p data-lang="en" style="color: var(--muted); font-size: 15px; line-height: 1.7; margin-bottom: 20px; max-width: 720px;">
           Full-stack geospatial platform for visualizing and managing 30,000+ oil & gas wells from ANP (Brazil's National Petroleum Agency).
@@ -525,7 +528,18 @@
       tags: ['Laravel', 'PhpSpreadsheet', 'jQuery', 'Laravel Storage', 'AJAX'],
       real: true
     },
-    { real: false },
+    {
+      titleEn: 'GeoQuiz — Geography Game',
+      titlePt: 'GeoQuiz — Jogo de Geografia',
+      img: 'assets/countries.gif',
+      subtitleEn: 'Guess the country from its silhouette — built with Python & Tkinter',
+      subtitlePt: 'Adivinhe o país pelo contorno — feito com Python & Tkinter',
+      descEn: 'Interactive geography game where players identify countries from their silhouettes. Built with Python, Tkinter for the GUI, Matplotlib for rendering shapes, and Fiona for reading GeoJSON files. Players get 5 attempts per country before the answer is revealed. Country shapes sourced from individual GeoJSON files.',
+      descPt: 'Jogo de geografia interativo onde o jogador identifica países pelo contorno. Feito com Python, Tkinter para a interface, Matplotlib para renderizar os shapes e Fiona para leitura de GeoJSON. O jogador tem 5 tentativas por país. Shapes obtidos de arquivos GeoJSON individuais.',
+      tags: ['Python', 'Tkinter', 'Matplotlib', 'Fiona', 'GeoJSON'],
+      real: true,
+      github: 'https://github.com/CleisonPaiva/geoquiz'
+    },
     { real: false },
     { real: false },
     { real: false },
@@ -571,8 +585,8 @@
 
   function renderWorkGrid() {
     const grid = document.getElementById('work-grid');
-    const rotated = [...workSamples.slice(rotationOffset), ...workSamples.slice(0, rotationOffset)];
-    const visible = showAll ? rotated : rotated.slice(0, VISIBLE_DEFAULT);
+    const sorted = [...workSamples.filter(i => i.real), ...workSamples.filter(i => !i.real)];
+    const visible = showAll ? sorted : sorted.slice(0, VISIBLE_DEFAULT);
     grid.innerHTML = visible.map((item, i) => buildCard(item, workSamples.indexOf(item))).join('');
 
     // re-apply lang after render
@@ -595,12 +609,12 @@
   }
 
   // Rotate every 5 seconds (only when collapsed)
-  setInterval(() => {
-    if (!showAll) {
-      rotationOffset = (rotationOffset + 1) % workSamples.length;
-      renderWorkGrid();
-    }
-  }, 5000);
+  // setInterval(() => {
+  //   if (!showAll) {
+  //     rotationOffset = (rotationOffset + 1) % workSamples.length;
+  //     renderWorkGrid();
+  //   }
+  // }, 5000);
 
   renderWorkGrid();
 
@@ -612,7 +626,8 @@
     document.getElementById('modal-title').textContent = lang === 'en' ? item.titleEn : item.titlePt;
     document.getElementById('modal-img').src = item.img;
     document.getElementById('modal-desc').textContent = lang === 'en' ? item.descEn : item.descPt;
-    document.getElementById('modal-tags').innerHTML = item.tags.map(t => `<span class="tag">${t}</span>`).join('');
+    document.getElementById('modal-tags').innerHTML = item.tags.map(t => `<span class="tag">${t}</span>`).join('')
+      + (item.github ? `<a href="${item.github}" target="_blank" class="btn-outline" style="font-size:13px;padding:6px 14px;margin-left:8px;">GitHub →</a>` : '');
     const modal = document.getElementById('work-modal');
     modal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
