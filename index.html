@@ -10,224 +10,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@400;500&display=swap"
         rel="stylesheet" />
-    <style>
-        :root {
-            --accent: #3b82f6;
-            --accent-dark: #1d4ed8;
-            --bg: #0a0a0f;
-            --surface: #13131a;
-            --surface2: #1c1c27;
-            --border: rgba(255, 255, 255, 0.07);
-            --text: #e2e8f0;
-            --muted: #64748b;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'DM Sans', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4 {
-            font-family: 'Syne', sans-serif;
-        }
-
-        .nav-link {
-            color: var(--muted);
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .nav-link:hover {
-            color: var(--text);
-        }
-
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--accent);
-            color: white;
-            padding: 12px 28px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 15px;
-            text-decoration: none;
-            transition: background 0.2s, transform 0.1s;
-            font-family: 'Syne', sans-serif;
-        }
-
-        .btn-primary:hover {
-            background: var(--accent-dark);
-            transform: translateY(-1px);
-        }
-
-        .btn-outline {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            border: 1px solid var(--border);
-            color: var(--text);
-            padding: 11px 24px;
-            border-radius: 8px;
-            font-weight: 500;
-            font-size: 14px;
-            text-decoration: none;
-            transition: border-color 0.2s, background 0.2s;
-            font-family: 'Syne', sans-serif;
-        }
-
-        .btn-outline:hover {
-            border-color: var(--accent);
-            background: rgba(59, 130, 246, 0.08);
-        }
-
-        .card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 28px;
-            transition: border-color 0.2s, transform 0.2s;
-        }
-
-        .card:hover {
-            border-color: rgba(59, 130, 246, 0.4);
-            transform: translateY(-2px);
-        }
-
-        .tag {
-            display: inline-block;
-            background: rgba(59, 130, 246, 0.1);
-            color: #93c5fd;
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 500;
-        }
-
-        .skill-tag {
-            background: var(--surface2);
-            border: 1px solid var(--border);
-            color: var(--text);
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: border-color 0.2s;
-        }
-
-        .skill-tag:hover {
-            border-color: rgba(59, 130, 246, 0.4);
-        }
-
-        .section-label {
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 12px;
-            font-family: 'Syne', sans-serif;
-        }
-
-        .divider {
-            border: none;
-            border-top: 1px solid var(--border);
-        }
-
-        .hero-gradient {
-            background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(59, 130, 246, 0.15), transparent);
-        }
-
-        .contact-link {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--muted);
-            text-decoration: none;
-            font-size: 15px;
-            padding: 12px 20px;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            background: var(--surface);
-            transition: all 0.2s;
-            font-weight: 500;
-        }
-
-        .contact-link:hover {
-            color: var(--text);
-            border-color: var(--accent);
-            background: rgba(59, 130, 246, 0.08);
-        }
-
-        .lang-btn {
-            background: var(--surface2);
-            border: 1px solid var(--border);
-            color: var(--muted);
-            padding: 5px 12px;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-            font-family: 'Syne', sans-serif;
-        }
-
-        .lang-btn.active {
-            background: var(--accent);
-            border-color: var(--accent);
-            color: white;
-        }
-
-        .lang-btn:hover:not(.active) {
-            border-color: var(--accent);
-            color: var(--text);
-        }
-
-        .lang-hidden {
-            display: none !important;
-        }
-
-        .work-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: border-color 0.2s, transform 0.2s, opacity 0.5s;
-        }
-
-        .work-card:hover {
-            border-color: rgba(59, 130, 246, 0.4);
-            transform: translateY(-2px);
-        }
-
-        .work-card.coming-soon {
-            opacity: 0.4;
-            cursor: default;
-            pointer-events: none;
-        }
-
-        #toggle-work-btn:hover {
-            border-color: var(--accent);
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗺️</text></svg>">
 </head>
 
 <body>
@@ -268,7 +53,6 @@
         <div style="max-width: 1100px; margin: 0 auto;">
             <p class="section-label" data-lang="en">Full-Stack Developer & GIS Specialist</p>
             <p class="section-label" data-lang="pt">Desenvolvedor Full-Stack & Especialista GIS</p>
-
             <h2 data-lang="en"
                 style="font-size: clamp(40px, 6vw, 72px); font-weight: 800; line-height: 1.1; margin-bottom: 24px; color: white;">
                 Building web systems<br />
@@ -281,7 +65,6 @@
                 <span style="color: var(--accent);">que escalam</span> —<br />
                 de APIs a mapas.
             </h2>
-
             <p data-lang="en"
                 style="font-size: 18px; color: var(--muted); max-width: 580px; margin-bottom: 40px; line-height: 1.7;">
                 5+ years building production web systems with PHP, Laravel, C#, and React.
@@ -294,7 +77,6 @@
                 Escrevo código backend limpo, entrego APIs confiáveis, automatizo deploys com CI/CD
                 e construo aplicações geoespaciais interativas com ArcGIS SDK.
             </p>
-
             <div style="display: flex; gap: 12px; flex-wrap: wrap;">
                 <a href="#projects" class="btn-primary" data-lang="en">View My Work →</a>
                 <a href="#projects" class="btn-primary" data-lang="pt">Ver Meu Trabalho →</a>
@@ -315,7 +97,6 @@
                 with</h3>
             <h3 data-lang="pt" style="font-size: 32px; font-weight: 700; margin-bottom: 48px; color: white;">Com o que
                 trabalho</h3>
-
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px;">
                 <div>
                     <p
@@ -351,6 +132,7 @@
                         <div class="skill-tag">🗄️ SQL Server</div>
                         <div class="skill-tag">📦 Entity Framework</div>
                         <div class="skill-tag">📊 GeoJSON / Shapefile</div>
+                        <div class="skill-tag">☁️ Supabase</div>
                     </div>
                 </div>
                 <div>
@@ -370,13 +152,23 @@
                         style="font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 16px;">
                         GIS & Spatial</p>
                     <div style="display: flex; flex-direction: column; gap: 8px;">
-                        <div class="skill-tag">🗺️ ArcGIS Maps SDK JS</div>
+                        <div class="skill-tag">🗺️ ArcGIS Maps</div>
                         <div class="skill-tag">🍃 Leaflet</div>
                         <div class="skill-tag">🌐 OpenLayers</div>
                         <div class="skill-tag">🌍 ArcGIS Online</div>
-                        <div class="skill-tag">📐 Feature Layers</div>
                         <div class="skill-tag">📍 Spatial Queries</div>
                         <div class="skill-tag">🛰️ Bounding Box APIs</div>
+                    </div>
+                </div>
+                <div>
+                    <p
+                        style="font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 16px;">
+                        Python / Data</p>
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <div class="skill-tag">🐍 Python</div>
+                        <div class="skill-tag">🗺️ GeoPandas / Shapely</div>
+                        <div class="skill-tag">🏙️ OSMnx</div>
+                        <div class="skill-tag">🔄 ETL Pipelines</div>
                     </div>
                 </div>
             </div>
@@ -396,6 +188,70 @@
                 construí</h3>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
+
+                <!-- Toronto Risk Dashboard -->
+                <div class="card" style="border-color: rgba(239,68,68,0.3); grid-column: 1 / -1;">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; margin-bottom: 16px;">
+                        <div>
+                            <p data-lang="en"
+                                style="font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #f87171; margin-bottom: 6px;">
+                                New — Full-Stack GIS</p>
+                            <p data-lang="pt"
+                                style="font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #f87171; margin-bottom: 6px;">
+                                Novo — GIS Full-Stack</p>
+                            <h4 style="font-size: 22px; font-weight: 700; color: white; margin-bottom: 8px;">Toronto
+                                Infrastructure Risk Dashboard</h4>
+                        </div>
+                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                            <a href="https://toronto-risk-dash.vercel.app" target="_blank" class="btn-primary"
+                                style="font-size: 13px; padding: 8px 16px;">Live Demo →</a>
+                            <a href="https://github.com/CleisonPaiva/toronto-risk-dashboard" target="_blank"
+                                class="btn-outline" style="font-size: 13px; padding: 8px 16px;">Frontend →</a>
+                            <a href="https://github.com/CleisonPaiva/TorontoRiskAPI" target="_blank" class="btn-outline"
+                                style="font-size: 13px; padding: 8px 16px;">API →</a>
+                            <a href="https://github.com/CleisonPaiva/toronto-risk-etl" target="_blank"
+                                class="btn-outline" style="font-size: 13px; padding: 8px 16px;">ETL →</a>
+                        </div>
+                    </div>
+                    <p data-lang="en"
+                        style="color: var(--muted); font-size: 15px; line-height: 1.7; margin-bottom: 20px; max-width: 720px;">
+                        Full-stack geospatial dashboard identifying which hospitals, schools, and subway stations in
+                        Toronto fall within TRCA flood-risk zones.
+                        Python ETL pipeline (GeoPandas, OSMnx, Shapely) processes open data from OpenStreetMap and the
+                        City of Toronto, calculates spatial risk using
+                        ST_Within operations, and loads results into Supabase/PostGIS. ASP.NET Core (.NET 10) API with
+                        Entity Framework and NetTopologySuite serves
+                        GeoJSON endpoints. React + TypeScript + ArcGIS Maps SDK frontend renders a choropleth map
+                        coloured by neighbourhood risk count, with
+                        UniqueValueRenderers for infrastructure layers, interactive risk ranking panel, and
+                        click-to-navigate between neighbourhoods.
+                    </p>
+                    <p data-lang="pt"
+                        style="color: var(--muted); font-size: 15px; line-height: 1.7; margin-bottom: 20px; max-width: 720px;">
+                        Dashboard geoespacial full-stack que identifica quais hospitais, escolas e estações de metrô de
+                        Toronto estão em zonas de risco de inundação do TRCA.
+                        Pipeline ETL em Python (GeoPandas, OSMnx, Shapely) processa dados abertos do OpenStreetMap e da
+                        Cidade de Toronto, calcula risco espacial com
+                        operações ST_Within e carrega os resultados no Supabase/PostGIS. API em ASP.NET Core (.NET 10)
+                        com Entity Framework e NetTopologySuite serve
+                        endpoints GeoJSON. Frontend em React + TypeScript + ArcGIS Maps SDK renderiza choropleth por
+                        risco de bairro com painel de ranking interativo
+                        e navegação por clique nos bairros.
+                    </p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        <span class="tag">Python</span>
+                        <span class="tag">GeoPandas</span>
+                        <span class="tag">OSMnx</span>
+                        <span class="tag">PostGIS</span>
+                        <span class="tag">ETL</span>
+                        <span class="tag">Spatial Queries</span>
+                        <span class="tag">ASP.NET Core</span>
+                        <span class="tag">React</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">ArcGIS Maps /span>
+                    </div>
+                </div>
 
                 <!-- WellsGIS -->
                 <div class="card" style="border-color: rgba(59,130,246,0.3); grid-column: 1 / -1;">
@@ -461,14 +317,16 @@
                     <p data-lang="en"
                         style="color: var(--muted); font-size: 14px; line-height: 1.6; margin-bottom: 16px;">
                         Web map consuming Vitória city's public ArcGIS REST service. Dynamically lists all available
-                        layers, allows switching between them, and renders attribute-rich popup tables for each feature.
-                        Uses esriRequest to query the MapServer metadata at runtime.
+                        layers, allows switching between them,
+                        and renders attribute-rich popup tables for each feature. Uses esriRequest to query the
+                        MapServer metadata at runtime.
                     </p>
                     <p data-lang="pt"
                         style="color: var(--muted); font-size: 14px; line-height: 1.6; margin-bottom: 16px;">
                         Mapa web que consome o serviço REST público do ArcGIS de Vitória. Lista dinamicamente todas as
-                        camadas, permite alternar entre elas e exibe tabelas de popup com todos os atributos. Usa
-                        esriRequest para consultar os metadados do MapServer em tempo real.
+                        camadas, permite alternar entre elas
+                        e exibe tabelas de popup com todos os atributos. Usa esriRequest para consultar os metadados do
+                        MapServer em tempo real.
                     </p>
                     <div style="display: flex; flex-wrap: wrap; gap: 6px;">
                         <span class="tag">ArcGIS JS API</span>
@@ -487,14 +345,16 @@
                     <p data-lang="en"
                         style="color: var(--muted); font-size: 14px; line-height: 1.6; margin-bottom: 16px;">
                         Spatial visualization of public infrastructure projects in Vitória, ES. Features category
-                        filtering with definitionExpression, unique-value renderer with color-coded markers by project
-                        type, basemap switcher, and popup templates showing progress and delivery dates.
+                        filtering with definitionExpression,
+                        unique-value renderer with color-coded markers by project type, basemap switcher, and popup
+                        templates showing progress and delivery dates.
                     </p>
                     <p data-lang="pt"
                         style="color: var(--muted); font-size: 14px; line-height: 1.6; margin-bottom: 16px;">
                         Visualização espacial de obras públicas em Vitória, ES. Inclui filtro por categoria com
-                        definitionExpression, renderer com marcadores coloridos por tipo de obra, seletor de basemap e
-                        popups com percentual de andamento e datas de entrega.
+                        definitionExpression, renderer com marcadores
+                        coloridos por tipo de obra, seletor de basemap e popups com percentual de andamento e datas de
+                        entrega.
                     </p>
                     <div style="display: flex; flex-wrap: wrap; gap: 6px;">
                         <span class="tag">ArcGIS JS API</span>
@@ -513,14 +373,16 @@
                     <p data-lang="en"
                         style="color: var(--muted); font-size: 14px; line-height: 1.6; margin-bottom: 16px;">
                         Interactive 3D urban visualization of São Paulo using ArcGIS WebScene and SceneView. Configures
-                        a custom camera position with heading and tilt, enables sun lighting with directional shadows,
-                        and allows full 3D navigation of the urban landscape.
+                        a custom camera position with heading and tilt,
+                        enables sun lighting with directional shadows, and allows full 3D navigation of the urban
+                        landscape.
                     </p>
                     <p data-lang="pt"
                         style="color: var(--muted); font-size: 14px; line-height: 1.6; margin-bottom: 16px;">
                         Visualização urbana 3D interativa de São Paulo com ArcGIS WebScene e SceneView. Configura
-                        posição de câmera customizada com heading e tilt, habilita iluminação solar com sombras
-                        direcionais e permite navegação 3D completa do ambiente urbano.
+                        posição de câmera customizada com heading e tilt,
+                        habilita iluminação solar com sombras direcionais e permite navegação 3D completa do ambiente
+                        urbano.
                     </p>
                     <div style="display: flex; flex-wrap: wrap; gap: 6px;">
                         <span class="tag">ArcGIS SceneView</span>
@@ -539,7 +401,6 @@
     <!-- Work Samples -->
     <section id="work" style="padding: 80px 24px;">
         <div style="max-width: 1100px; margin: 0 auto;">
-
             <p class="section-label" data-lang="en">Work Samples</p>
             <p class="section-label" data-lang="pt">Amostras de Trabalho</p>
             <h3 data-lang="en" style="font-size: 32px; font-weight: 700; margin-bottom: 8px; color: white;">Real work,
@@ -550,11 +411,7 @@
                 and automations built in production environments.</p>
             <p data-lang="pt" style="color: var(--muted); font-size: 15px; margin-bottom: 40px;">Uma amostra de sistemas
                 e automações construídos em ambientes de produção.</p>
-
-            <!-- Grid rendered by JS -->
             <div id="work-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;"></div>
-
-            <!-- Show More / Less -->
             <div style="text-align: center; margin-top: 28px;">
                 <button id="toggle-work-btn" onclick="toggleWorkGrid()"
                     style="background: var(--surface2); border: 1px solid var(--border); color: var(--text); padding: 10px 32px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; font-family: 'Syne', sans-serif; transition: border-color 0.2s;">
@@ -562,7 +419,6 @@
                     <span data-lang="pt">Ver Mais</span>
                 </button>
             </div>
-
         </div>
     </section>
 
@@ -599,29 +455,31 @@
             </h3>
             <p data-lang="en" style="color: var(--muted); font-size: 16px; line-height: 1.8; margin-bottom: 16px;">
                 I'm a full-stack developer with 5+ years of production experience building systems with PHP, Laravel,
-                C#, and ASP.NET Core.
-                I work across the full stack — from database design and API architecture to frontend interfaces and
+                C#, and ASP.NET Core e Python.
+                I work across the full stack from database design and API architecture to frontend interfaces and
                 CI/CD pipelines with GitHub Actions.
             </p>
             <p data-lang="pt" style="color: var(--muted); font-size: 16px; line-height: 1.8; margin-bottom: 16px;">
                 Sou desenvolvedor full-stack com 5+ anos de experiência em produção construindo sistemas com PHP,
-                Laravel, C# e ASP.NET Core.
-                Trabalho em toda a stack — de design de banco de dados e arquitetura de API a interfaces frontend e
+                Laravel, C# e ASP.NET Core and Python.
+                Trabalho em toda a stack de design de banco de dados e arquitetura de API a interfaces frontend e
                 pipelines de CI/CD com GitHub Actions.
             </p>
             <p data-lang="en" style="color: var(--muted); font-size: 16px; line-height: 1.8;">
-                Beyond standard web development, I've built expertise in geospatial systems — creating applications that
-                combine
-                solid backend architecture with interactive maps using ArcGIS Maps SDK for JavaScript.
-                My background in environmental and energy sector data gives me practical domain knowledge for spatial
-                projects.
+                Beyond standard web development, I've built expertise in geospatial systems
+                creating applications that combine solid backend architecture with interactive
+                maps using ArcGIS Maps SDK for JavaScript, Leaflet and OpenLayers, alongside
+                ETL pipelines for spatial data processing and PostGIS queries. My background
+                in environmental and energy sector data gives me practical domain knowledge
+                for spatial projects.
             </p>
             <p data-lang="pt" style="color: var(--muted); font-size: 16px; line-height: 1.8;">
-                Além do desenvolvimento web, construí expertise em sistemas geoespaciais — criando aplicações que
-                combinam
-                arquitetura backend sólida com mapas interativos usando ArcGIS Maps SDK for JavaScript.
-                Meu background em dados ambientais e do setor de energia me dá conhecimento prático de domínio para
-                projetos espaciais.
+                Além do desenvolvimento web, construí expertise em sistemas geoespaciais
+                criando aplicações que combinam arquitetura backend sólida com mapas interativos
+                usando ArcGIS Maps SDK para JavaScript, Leaflet e OpenLayers, junto com pipelines
+                ETL para processamento e transformação de dados espaciais e queries com PostGIS.
+                Meu background em dados ambientais e do setor de energia me dá conhecimento
+                prático de domínio para projetos espaciais.
             </p>
         </div>
     </section>
@@ -637,13 +495,10 @@
                 together</h3>
             <h3 data-lang="pt" style="font-size: 32px; font-weight: 700; margin-bottom: 12px; color: white;">Vamos
                 trabalhar juntos</h3>
-            <p data-lang="en" style="color: var(--muted); font-size: 16px; margin-bottom: 40px;">
-                Open to full-stack, backend, and GIS developer roles. Available for remote and on-site opportunities.
-            </p>
-            <p data-lang="pt" style="color: var(--muted); font-size: 16px; margin-bottom: 40px;">
-                Aberto a vagas de full-stack, backend e GIS developer. Disponível para oportunidades remotas e
-                presenciais.
-            </p>
+            <p data-lang="en" style="color: var(--muted); font-size: 16px; margin-bottom: 40px;">Open to full-stack,
+                backend, and GIS developer roles. Available for remote and on-site opportunities.</p>
+            <p data-lang="pt" style="color: var(--muted); font-size: 16px; margin-bottom: 40px;">Aberto a vagas de
+                full-stack, backend e GIS developer. Disponível para oportunidades remotas e presenciais.</p>
             <div style="display: flex; flex-direction: column; gap: 12px; max-width: 360px; margin: 0 auto;">
                 <a href="mailto:cleison.mpaiva@gmail.com" class="contact-link"><span>✉️</span>
                     cleison.mpaiva@gmail.com</a>
@@ -664,8 +519,19 @@
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // ─── Work Samples Data ───────────────────────────────────────────────
         const workSamples = [
+            {
+                titleEn: 'Toronto Explorer — Leaflet & OpenLayers',
+                titlePt: 'Toronto Explorer — Leaflet & OpenLayers',
+                img: 'assets/torontoExplorer.gif',
+                subtitleEn: 'Side-by-side comparison of Leaflet and OpenLayers with real Toronto open data',
+                subtitlePt: 'Comparação prática de Leaflet e OpenLayers com dados abertos reais de Toronto',
+                descEn: 'Interactive map application visualizing five real Toronto datasets neighbourhoods, hospitals, subway stations, schools, and TRCA flood-risk zones. Implemented twice with the same data: once using Leaflet and once using OpenLayers, as a hands-on comparison between the two libraries. Features toggleable layers, custom emoji icons, popups, and tooltips, with React Router for switching between implementations.',
+                descPt: 'Aplicação de mapa interativo visualizando cinco datasets reais de Toronto bairros, hospitais, estações de metrô, escolas e zonas de risco de inundação do TRCA. Implementado duas vezes com os mesmos dados: uma vez com Leaflet e outra com OpenLayers, como comparação prática entre as duas bibliotecas. Inclui camadas que podem ser ativadas/desativadas, ícones customizados, popups e tooltips, com React Router para alternar entre as implementações.',
+                tags: ['React', 'TypeScript', 'Leaflet', 'OpenLayers', 'PrimeReact', 'GeoJSON'],
+                real: true,
+                github: 'https://github.com/CleisonPaiva/toronto-map'
+            },
             {
                 titleEn: 'Excel Report Generator',
                 titlePt: 'Gerador de Relatórios Excel',
@@ -681,25 +547,13 @@
                 titleEn: 'GeoQuiz — Geography Game',
                 titlePt: 'GeoQuiz — Jogo de Geografia',
                 img: 'assets/countries.gif',
-                subtitleEn: 'Guess the country from its silhouette — built with Python & Tkinter',
-                subtitlePt: 'Adivinhe o país pelo contorno — feito com Python & Tkinter',
-                descEn: 'Interactive geography game where players identify countries from their silhouettes. Built with Python, Tkinter for the GUI, Matplotlib for rendering shapes, and Fiona for reading GeoJSON files. Players get 5 attempts per country before the answer is revealed. Country shapes sourced from individual GeoJSON files.',
-                descPt: 'Jogo de geografia interativo onde o jogador identifica países pelo contorno. Feito com Python, Tkinter para a interface, Matplotlib para renderizar os shapes e Fiona para leitura de GeoJSON. O jogador tem 5 tentativas por país. Shapes obtidos de arquivos GeoJSON individuais.',
+                subtitleEn: 'Guess the country from its silhouette built with Python & Tkinter',
+                subtitlePt: 'Adivinhe o país pelo contorno feito com Python & Tkinter',
+                descEn: 'Interactive geography game where players identify countries from their silhouettes. Built with Python, Tkinter for the GUI, Matplotlib for rendering shapes, and Fiona for reading GeoJSON files. Players get 5 attempts per country before the answer is revealed.',
+                descPt: 'Jogo de geografia interativo onde o jogador identifica países pelo contorno. Feito com Python, Tkinter para a interface, Matplotlib para renderizar os shapes e Fiona para leitura de GeoJSON. O jogador tem 5 tentativas por país.',
                 tags: ['Python', 'Tkinter', 'Matplotlib', 'Fiona', 'GeoJSON'],
                 real: true,
                 github: 'https://github.com/CleisonPaiva/geoquiz'
-            },
-            {
-                titleEn: 'Toronto Explorer — Leaflet & OpenLayers',
-                titlePt: 'Toronto Explorer — Leaflet & OpenLayers',
-                img: 'assets/torontoExplorer.gif',
-                subtitleEn: 'Interactive map of real Toronto open data — built with both Leaflet and OpenLayers',
-                subtitlePt: 'Mapa interativo com dados abertos reais de Toronto — feito com Leaflet e OpenLayers',
-                descEn: 'Interactive map application visualizing five real Toronto datasets — neighbourhoods, hospitals, subway stations, schools, and TRCA flood-risk zones. Implemented twice with the same data, once using Leaflet and once using OpenLayers, as a hands-on comparison between the two libraries. Features toggleable layers, custom icons, popups, and tooltips, with React Router for switching between implementations.',
-                descPt: 'Aplicação de mapa interativo visualizando cinco datasets reais de Toronto — bairros, hospitais, estações de metrô, escolas e zonas de risco de inundação do TRCA. Implementado duas vezes com os mesmos dados, uma vez com Leaflet e outra com OpenLayers, como comparação prática entre as duas bibliotecas. Inclui camadas que podem ser ativadas/desativadas, ícones customizados, popups e tooltips, com React Router para alternar entre as implementações.',
-                tags: ['React', 'TypeScript', 'Leaflet', 'OpenLayers', 'PrimeReact', 'GeoJSON'],
-                real: true,
-                github: 'https://github.com/CleisonPaiva/toronto-explorer'
             },
             { real: false },
             { real: false },
@@ -708,39 +562,31 @@
             { real: false },
         ];
 
-        // ─── Grid State ──────────────────────────────────────────────────────
-        const VISIBLE_DEFAULT = 8; // 2 rows of 4
+        const VISIBLE_DEFAULT = 8;
         let showAll = false;
-        let rotationOffset = 0;
 
         function buildCard(item, index) {
             if (!item.real) {
-                return `
-        <div class="work-card coming-soon">
-          <div style="height:150px;background:var(--surface2);display:flex;align-items:center;justify-content:center;">
-            <span style="font-size:28px;">🔒</span>
-          </div>
-          <div style="padding:14px;">
-            <p data-lang="en" style="font-size:13px;font-weight:600;color:white;margin-bottom:4px;">Coming Soon</p>
-            <p data-lang="pt" style="font-size:13px;font-weight:600;color:white;margin-bottom:4px;">Em Breve</p>
-          </div>
-        </div>`;
+                return `<div class="work-card coming-soon">
+                    <div style="height:150px;background:var(--surface2);display:flex;align-items:center;justify-content:center;"><span style="font-size:28px;">🔒</span></div>
+                    <div style="padding:14px;">
+                        <p data-lang="en" style="font-size:13px;font-weight:600;color:white;margin-bottom:4px;">Coming Soon</p>
+                        <p data-lang="pt" style="font-size:13px;font-weight:600;color:white;margin-bottom:4px;">Em Breve</p>
+                    </div>
+                </div>`;
             }
-            return `
-      <div class="work-card" onclick="openModal(${index})">
-        <div style="height:150px;overflow:hidden;background:var(--surface2);">
-          <img src="${item.img}" alt="" style="width:100%;height:100%;object-fit:cover;" />
-        </div>
-        <div style="padding:14px;">
-          <p data-lang="en" style="font-size:13px;font-weight:600;color:white;margin-bottom:4px;">${item.titleEn}</p>
-          <p data-lang="pt" style="font-size:13px;font-weight:600;color:white;margin-bottom:4px;">${item.titlePt}</p>
-          <p data-lang="en" style="font-size:11px;color:var(--muted);margin-bottom:10px;">${item.subtitleEn}</p>
-          <p data-lang="pt" style="font-size:11px;color:var(--muted);margin-bottom:10px;">${item.subtitlePt}</p>
-          <div style="display:flex;gap:5px;flex-wrap:wrap;">
-            ${item.tags.map(t => `<span class="tag">${t}</span>`).join('')}
-          </div>
-        </div>
-      </div>`;
+            return `<div class="work-card" onclick="openModal(${index})">
+                <div style="height:150px;overflow:hidden;background:var(--surface2);">
+                    <img src="${item.img}" alt="" style="width:100%;height:100%;object-fit:cover;" />
+                </div>
+                <div style="padding:14px;">
+                    <p data-lang="en" style="font-size:13px;font-weight:600;color:white;margin-bottom:4px;">${item.titleEn}</p>
+                    <p data-lang="pt" style="font-size:13px;font-weight:600;color:white;margin-bottom:4px;">${item.titlePt}</p>
+                    <p data-lang="en" style="font-size:11px;color:var(--muted);margin-bottom:10px;">${item.subtitleEn}</p>
+                    <p data-lang="pt" style="font-size:11px;color:var(--muted);margin-bottom:10px;">${item.subtitlePt}</p>
+                    <div style="display:flex;gap:5px;flex-wrap:wrap;">${item.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+                </div>
+            </div>`;
         }
 
         function renderWorkGrid() {
@@ -748,37 +594,19 @@
             const sorted = [...workSamples.filter(i => i.real), ...workSamples.filter(i => !i.real)];
             const visible = showAll ? sorted : sorted.slice(0, VISIBLE_DEFAULT);
             grid.innerHTML = visible.map((item, i) => buildCard(item, workSamples.indexOf(item))).join('');
-
-            // re-apply lang after render
             const lang = localStorage.getItem('lang') || 'en';
             grid.querySelectorAll('[data-lang]').forEach(el => {
                 el.classList.toggle('lang-hidden', el.dataset.lang !== lang);
             });
-
-            // update button text
             const btn = document.getElementById('toggle-work-btn');
-            const enSpan = btn.querySelector('[data-lang="en"]');
-            const ptSpan = btn.querySelector('[data-lang="pt"]');
-            enSpan.textContent = showAll ? 'Show Less' : 'Show More';
-            ptSpan.textContent = showAll ? 'Ver Menos' : 'Ver Mais';
+            btn.querySelector('[data-lang="en"]').textContent = showAll ? 'Show Less' : 'Show More';
+            btn.querySelector('[data-lang="pt"]').textContent = showAll ? 'Ver Menos' : 'Ver Mais';
         }
 
-        function toggleWorkGrid() {
-            showAll = !showAll;
-            renderWorkGrid();
-        }
-
-        // Rotate every 5 seconds (only when collapsed)
-        // setInterval(() => {
-        //   if (!showAll) {
-        //     rotationOffset = (rotationOffset + 1) % workSamples.length;
-        //     renderWorkGrid();
-        //   }
-        // }, 5000);
+        function toggleWorkGrid() { showAll = !showAll; renderWorkGrid(); }
 
         renderWorkGrid();
 
-        // ─── Modal ───────────────────────────────────────────────────────────
         function openModal(index) {
             const item = workSamples[index];
             if (!item || !item.real) return;
@@ -788,8 +616,7 @@
             document.getElementById('modal-desc').textContent = lang === 'en' ? item.descEn : item.descPt;
             document.getElementById('modal-tags').innerHTML = item.tags.map(t => `<span class="tag">${t}</span>`).join('')
                 + (item.github ? `<a href="${item.github}" target="_blank" class="btn-outline" style="font-size:13px;padding:6px 14px;margin-left:8px;">GitHub →</a>` : '');
-            const modal = document.getElementById('work-modal');
-            modal.style.display = 'flex';
+            document.getElementById('work-modal').style.display = 'flex';
             document.body.style.overflow = 'hidden';
         }
 
@@ -798,11 +625,8 @@
             document.body.style.overflow = '';
         }
 
-        document.getElementById('work-modal').addEventListener('click', function (e) {
-            if (e.target === this) closeModal();
-        });
+        document.getElementById('work-modal').addEventListener('click', function (e) { if (e.target === this) closeModal(); });
 
-        // ─── Language ────────────────────────────────────────────────────────
         function setLang(lang) {
             document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
             document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
@@ -813,8 +637,7 @@
         }
 
         document.querySelectorAll('[data-lang]').forEach(el => el.classList.add('lang-hidden'));
-        const savedLang = localStorage.getItem('lang') || 'en';
-        setLang(savedLang);
+        setLang(localStorage.getItem('lang') || 'en');
     </script>
 
 </body>
