@@ -14,6 +14,7 @@ Full-stack developer with 5+ years of production experience in PHP/Laravel, C#/A
 
 | Project | Stack | Links |
 |---|---|---|
+| **Toronto Road Safety Dashboard** | Python · ArcGIS API for Python · ArcGIS JS API · Spatial Joins · OAuth 2.0 · pytest | [Live](https://cleisonpaiva.github.io/toronto-road-safety-dashboard/) · [GitHub](https://github.com/CleisonPaiva/toronto-road-safety-dashboard) |
 | **Toronto Infrastructure Risk Dashboard** | Python · GeoPandas · PostGIS · ASP.NET Core · React · ArcGIS SDK | [Live](https://toronto-risk-dash.vercel.app) · [Frontend](https://github.com/CleisonPaiva/toronto-risk-dashboard) · [API](https://github.com/CleisonPaiva/toronto-risk-api) · [ETL](https://github.com/CleisonPaiva/toronto-risk-etl) |
 | **WellsGIS** | ASP.NET Core · PostgreSQL · React · ArcGIS SDK | [Live](https://wells-frontend-one.vercel.app) · [GitHub](https://github.com/CleisonPaiva/wells-frontend) |
 | **Toronto Explorer** | React · TypeScript · Leaflet · OpenLayers | [GitHub](https://github.com/CleisonPaiva/toronto-map) |
