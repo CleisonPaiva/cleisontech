@@ -189,69 +189,6 @@
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
 
-                <!-- Toronto Road Safety Dashboard -->
-                <div class="card" style="border-color: rgba(34,197,94,0.3); grid-column: 1 / -1;">
-                    <div
-                        style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; margin-bottom: 16px;">
-                        <div>
-                            <p data-lang="en"
-                                style="font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #4ade80; margin-bottom: 6px;">
-                                New — Spatial Analysis with ArcGIS Python</p>
-                            <p data-lang="pt"
-                                style="font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #4ade80; margin-bottom: 6px;">
-                                Novo — Análise Espacial com ArcGIS Python</p>
-                            <h4 style="font-size: 22px; font-weight: 700; color: white; margin-bottom: 8px;">Toronto
-                                Road Safety Dashboard</h4>
-                        </div>
-                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                            <a href="https://cleisonpaiva.github.io/toronto-road-safety-dashboard/" target="_blank"
-                                rel="noopener noreferrer" class="btn-primary"
-                                style="font-size: 13px; padding: 8px 16px;">Live Demo →</a>
-                            <a href="https://github.com/CleisonPaiva/toronto-road-safety-dashboard" target="_blank"
-                                rel="noopener noreferrer" class="btn-outline"
-                                style="font-size: 13px; padding: 8px 16px;">GitHub →</a>
-                        </div>
-                    </div>
-                    <p data-lang="en"
-                        style="color: var(--muted); font-size: 15px; line-height: 1.7; margin-bottom: 20px; max-width: 720px;">
-                        Interactive web map analyzing ~120,000 Toronto traffic collision records across four spatial
-                        dimensions: proximity to traffic signals (50m buffer), bike lanes (25m buffer),
-                        neighbourhoods (point-in-polygon join), and schools (150m legislated school safety zone).
-                        Built end-to-end with the ArcGIS API for Python — authenticating via OAuth 2.0, ingesting
-                        from both ArcGIS Hub and CKAN data portals, cleaning and validating geometry, running
-                        geodesic buffer and spatial join analyses, and exporting to GeoJSON for a static ArcGIS JS
-                        API map (OpenStreetMap basemap, zero ArcGIS Online credit usage). Two data-quality issues
-                        were investigated and documented as regression tests: a silently-too-tight bounding box
-                        that was dropping valid records, and a 17% divergence between a fresh spatial join and a
-                        pre-existing neighbourhood field, traced to differing boundary-scheme vintages.
-                    </p>
-                    <p data-lang="pt"
-                        style="color: var(--muted); font-size: 15px; line-height: 1.7; margin-bottom: 20px; max-width: 720px;">
-                        Mapa web interativo analisando ~120.000 registros de colisões de trânsito em Toronto sob
-                        quatro dimensões espaciais: proximidade a semáforos (buffer de 50m), ciclovias (buffer de
-                        25m), bairros (join point-in-polygon) e escolas (zona de segurança escolar de 150m,
-                        legalmente definida). Construído de ponta a ponta com ArcGIS API for Python — autenticação
-                        via OAuth 2.0, ingestão do ArcGIS Hub e de portais CKAN, limpeza e validação de geometria,
-                        análises de buffer geodésico e spatial join, e exportação para GeoJSON num mapa estático em
-                        ArcGIS JS API (basemap OpenStreetMap, zero consumo de créditos do ArcGIS Online). Duas
-                        questões de qualidade de dado foram investigadas e documentadas como testes de regressão:
-                        um bounding box apertado demais que descartava registros válidos silenciosamente, e uma
-                        divergência de 17% entre um spatial join novo e um campo de bairro pré-existente, rastreada
-                        a diferentes versões do esquema de fronteiras.
-                    </p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                        <span class="tag">Python</span>
-                        <span class="tag">ArcGIS API for Python</span>
-                        <span class="tag">ArcGIS JS API</span>
-                        <span class="tag">Spatial Joins</span>
-                        <span class="tag">Geodesic Buffer</span>
-                        <span class="tag">OAuth 2.0</span>
-                        <span class="tag">GeoJSON</span>
-                        <span class="tag">pytest</span>
-                        <span class="tag">CKAN API</span>
-                    </div>
-                </div>
-
                 <!-- Toronto Risk Dashboard -->
                 <div class="card" style="border-color: rgba(239,68,68,0.3); grid-column: 1 / -1;">
                     <div
@@ -259,10 +196,10 @@
                         <div>
                             <p data-lang="en"
                                 style="font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #f87171; margin-bottom: 6px;">
-                                Full-Stack GIS — 3-Tier Architecture</p>
+                                New — Full-Stack GIS</p>
                             <p data-lang="pt"
                                 style="font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #f87171; margin-bottom: 6px;">
-                                GIS Full-Stack — Arquitetura em 3 Camadas</p>
+                                Novo — GIS Full-Stack</p>
                             <h4 style="font-size: 22px; font-weight: 700; color: white; margin-bottom: 8px;">Toronto
                                 Infrastructure Risk Dashboard</h4>
                         </div>
@@ -312,7 +249,7 @@
                         <span class="tag">ASP.NET Core</span>
                         <span class="tag">React</span>
                         <span class="tag">TypeScript</span>
-                        <span class="tag">ArcGIS Maps</span>
+                        <span class="tag">ArcGIS Maps </span>
                     </div>
                 </div>
 
@@ -381,8 +318,8 @@
                         <a href="https://cleisonpaiva.github.io/cleisontech/samples/01-publicWorkVix/publicWorkVix.html"
                             target="_blank" class="btn-primary" style="font-size: 13px; padding: 8px 16px;">Live Demo
                             →</a>
-                        <a href="https://github.com/CleisonPaiva/cleisontech/tree/main/samples/01-publicWorkVix"
-                            target="_blank" class="btn-outline" style="font-size: 13px; padding: 8px 16px;">GitHub →</a>
+                        <a href="https://github.com/CleisonPaiva/cleisontech/tree/main/samples/01-publicWorkVix" target="_blank" class="btn-outline"
+                            style="font-size: 13px; padding: 8px 16px;">GitHub →</a>
                     </div>
                     <p data-lang="en"
                         style="color: var(--muted); font-size: 14px; line-height: 1.6; margin-bottom: 16px;">
@@ -416,8 +353,8 @@
                         <a href="https://cleisonpaiva.github.io/cleisontech/samples/02-publicBuildVix/publicBuildVix.html"
                             target="_blank" class="btn-primary" style="font-size: 13px; padding: 8px 16px;">Live Demo
                             →</a>
-                        <a href="https://github.com/CleisonPaiva/cleisontech/tree/main/samples/02-publicBuildVix"
-                            target="_blank" class="btn-outline" style="font-size: 13px; padding: 8px 16px;">GitHub →</a>
+                        <a href="https://github.com/CleisonPaiva/cleisontech/tree/main/samples/02-publicBuildVix" target="_blank" class="btn-outline"
+                            style="font-size: 13px; padding: 8px 16px;">GitHub →</a>
                     </div>
                     <p data-lang="en"
                         style="color: var(--muted); font-size: 14px; line-height: 1.6; margin-bottom: 16px;">
@@ -451,8 +388,8 @@
                         <a href="https://cleisonpaiva.github.io/cleisontech/samples/03-saoPauloWebScene/saoPauloWebScene.html"
                             target="_blank" class="btn-primary" style="font-size: 13px; padding: 8px 16px;">Live Demo
                             →</a>
-                        <a href="https://github.com/CleisonPaiva/cleisontech/tree/main/samples/03-saoPauloWebScene"
-                            target="_blank" class="btn-outline" style="font-size: 13px; padding: 8px 16px;">GitHub →</a>
+                        <a href="https://github.com/CleisonPaiva/cleisontech/tree/main/samples/03-saoPauloWebScene" target="_blank" class="btn-outline"
+                            style="font-size: 13px; padding: 8px 16px;">GitHub →</a>
                     </div>
                     <p data-lang="en"
                         style="color: var(--muted); font-size: 14px; line-height: 1.6; margin-bottom: 16px;">
